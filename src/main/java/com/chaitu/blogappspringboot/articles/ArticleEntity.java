@@ -13,6 +13,8 @@ import java.util.Date;
 @Getter
 @Setter
 @RequiredArgsConstructor
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
 @ToString
 public class ArticleEntity {

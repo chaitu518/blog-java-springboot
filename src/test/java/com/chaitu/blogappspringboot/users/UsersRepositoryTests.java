@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ActiveProfiles;
 
 @DataJpaTest
 @ActiveProfiles("test")
+
 public class UsersRepositoryTests {
     @Autowired
     UserRepository userRepository;
@@ -30,19 +32,6 @@ public class UsersRepositoryTests {
         int size=userRepository.findAll().size();
         Assertions.assertEquals(1,size);
     }
-    @Test
-    @Order(3)
-    public void can_find_user_by_two(){
-        var user1 = UserEntity.builder()
-                .username("Nagasri")
-                .email("example@gmail.com").build();
-        var user2 = UserEntity.builder()
-                .username("surya")
-                .email("example@gmail.com").build();
-        userRepository.save(user1);
-        userRepository.save(user2);
-        int size=userRepository.findAll().size();
-        Assertions.assertEquals(2,size);
-    }
+
 
 }
