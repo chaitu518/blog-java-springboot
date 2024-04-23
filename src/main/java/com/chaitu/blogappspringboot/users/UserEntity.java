@@ -9,6 +9,8 @@ import org.springframework.lang.Nullable;
 @Entity(name = "users")
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
 @ToString
