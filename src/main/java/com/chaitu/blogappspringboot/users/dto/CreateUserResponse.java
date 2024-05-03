@@ -14,4 +14,6 @@ public class CreateUserResponse {
     private String bio;
 
     private String image;
+
+    private String token;
 }
